@@ -9,7 +9,16 @@ text: [] output => ["0"]
 """
 
 
-def fn_hack_6(s):
-    result = s
-    #...
+def fn_hack_6(result):
+    
+    list_compuesta = ["a","b","c","d","e"]
+    if result==[]:
+        result.append("0")
+    else:
+        for i in range(len(result)):
+            if (result[i] in list_compuesta) and i%2==0:
+                result[i] = f"{i+1}"
+            elif (result[i] in list_compuesta) and i%2!=0:
+                 result[i] = "-"
+    
     return result
